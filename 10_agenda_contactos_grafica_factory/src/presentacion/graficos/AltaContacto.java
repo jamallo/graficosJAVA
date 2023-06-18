@@ -92,6 +92,10 @@ public class AltaContacto extends JFrame {
 				}else {
 					JOptionPane.showMessageDialog(btnNewButton,"Teléfono repetido, el contacto no se ha añadido!");
 				}
+				numero.setText("");
+				nombre.setText("");
+				email.setText("");
+				edad.setText("");
 			}
 		});
 		btnNewButton.setBounds(211, 182, 85, 21);
