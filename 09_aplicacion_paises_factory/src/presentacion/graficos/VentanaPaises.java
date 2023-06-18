@@ -47,7 +47,26 @@ public class VentanaPaises extends JFrame {
 	 * Create the frame.
 	 */
 	public VentanaPaises() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 724, 447);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(31, 158, 638, 222);
+		contentPane.add(scrollPane);
+		
+		tablePaises = new JTable();
+		scrollPane.setViewportView(tablePaises);
+		
+		JScrollPane scrollPane_1 = new JScrollPane();
+		scrollPane_1.setBounds(181, 26, 348, 39);
+		contentPane.add(scrollPane_1);
 		JComboBox<String> cbListaContinentes = new JComboBox<>();
+		scrollPane_1.setViewportView(cbListaContinentes);
 		cbListaContinentes.addItemListener(new ItemListener() {
 			public void itemStateChanged(ItemEvent e) {
 				AdaptadorTablaPaises tablaP = new AdaptadorTablaPaises((String) cbListaContinentes.getSelectedItem());
@@ -62,17 +81,7 @@ public class VentanaPaises extends JFrame {
 				
 			}
 		});
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 724, 447);
-		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-
-		setContentPane(contentPane);
-		contentPane.setLayout(null);
 		
-		
-		cbListaContinentes.setBounds(191, 68, 336, 34);
-		contentPane.add(cbListaContinentes);
 		
 //		JButton btnMostrarPaises = new JButton("Mostrar países");
 //		btnMostrarPaises.addActionListener(new ActionListener() {
@@ -86,15 +95,6 @@ public class VentanaPaises extends JFrame {
 //		btnMostrarPaises.setBounds(267, 110, 138, 21);
 //		contentPane.add(btnMostrarPaises);
 		
-		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(31, 158, 638, 222);
-		contentPane.add(scrollPane);
 		
-		tablePaises = new JTable();
-		scrollPane.setViewportView(tablePaises);
-		
-		JScrollPane scrollPane_1 = new JScrollPane();
-		scrollPane_1.setBounds(181, 26, 348, 39);
-		contentPane.add(scrollPane_1);
 	}
 }
