@@ -73,7 +73,7 @@ public class CalculadoraVentana extends JFrame {
 		JButton btnSumar = new JButton("Sumar");
 		btnSumar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(btnSumar, "Suma: " + (Integer.parseInt(lblNumero1.getText()) + Integer.parseInt(lblNumero2.getText())));
+				JOptionPane.showMessageDialog(btnSumar, "Suma: " + (Integer.parseInt(jtNum1.getText()) + Integer.parseInt(jtNum2.getText())));
 			}
 		});
 		btnSumar.setBounds(83, 178, 85, 21);
@@ -82,7 +82,7 @@ public class CalculadoraVentana extends JFrame {
 		JButton btnMultiplicar = new JButton("Multiplicar");
 		btnMultiplicar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(btnMultiplicar, "Suma: " + (Integer.parseInt(lblNumero1.getText()) * Integer.parseInt(lblNumero2.getText())));
+				JOptionPane.showMessageDialog(btnMultiplicar, "Suma: " + (Integer.parseInt(jtNum1.getText()) * Integer.parseInt(jtNum2.getText())));
 			}
 		});
 		btnMultiplicar.setBounds(205, 178, 85, 21);
